@@ -1,0 +1,22 @@
+CREATE TABLE author (
+   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE books (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+book_cover VARCHAR(500) NOT NULL,
+book_url VARCHAR(500) NOT NULL,
+author_id INT(6),
+description TEXT,
+ FOREIGN KEY (author_id) REFERENCES author(id)
+
+);
+
+
+
+
+
+
+
