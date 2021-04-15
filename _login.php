@@ -1,9 +1,6 @@
 <?php
-//This script will handle login
-
 session_start();
 
-// check if the user is already logged in
 if(isset($_SESSION['email']))
 {
     header("location: dashboard.php");
@@ -13,8 +10,6 @@ require_once "_connection.php";
 
 $email = $password = "";
 
-
-// if request method is post
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     if(empty(trim($_POST['email'])) || empty(trim($_POST['password'])))
     {   echo "<script type='text/javascript'>

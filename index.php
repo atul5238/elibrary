@@ -1,5 +1,5 @@
 <?php require("session.php"); 
-
+include ("header.php");
 ?>
 
 
@@ -28,27 +28,6 @@
 </head>
 
 <body>
-
-    <div class="header">
-        <div class="container">
-            <h1 class="pt-5 pt-md-4 pt-xl-2" style="color: rgb(253, 252, 252);
-            text-align: center;margin-bottom: 0%;">WELCOME TO E-LIBRARY</h1>
-        </div><br><br>
-    </div>
-
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" style="color:gold;">E-Library</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                </ul>
-            </div>
-
-        </div>
-    </nav>
 
     <div class="form">
         <div class="toggle">
