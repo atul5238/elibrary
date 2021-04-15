@@ -24,12 +24,12 @@ if (
 
   if ($emailcount > 0) {
 
-    // $msg = "Someone has already registered using this email id :)";
-    // header('index.php');
-    echo "<script type='text/javascript'>
-    window.setTimeout(function() { alert( 'Someone has already registered using this email !' );
-    window.location = './index.php';},0);
-      </script>";
+    $msg = "Someone has already registered using this email id :)";
+    header('location: index.php?msg='.$msg);
+    // echo "<script type='text/javascript'>
+    // window.setTimeout(function() { alert( 'Someone has already registered using this email !' );
+    // window.location = './index.php';},0);
+    //   </script>";
   } else {
     $sql_query = "INSERT INTO users (name,password,role,email,token,status) values ('$name','$hash','$role','$email','$token','inactive'); ";
     $result = mysqli_query($db_connection, $sql_query);
