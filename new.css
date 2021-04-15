@@ -1,0 +1,79 @@
+body {
+    /* overflow-y:hidden; */
+    background: url('elib.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height: 1024px;
+}
+
+#logo {
+    color: gold;
+}
+
+.header {
+    background: rgb(3, 21, 29);
+    margin-top: 3.5%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 2.5%;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+h6 {
+    padding-top: 2%;
+    color:   white;
+    text-align: center;
+}
+
+.form {
+    background-color: rgb(3, 21, 29);
+    padding: 2%;
+    width: 90%;
+    margin: 5%;
+    margin-top: 2%;
+}
+@media only screen and (min-width: 600px) {
+    .form {
+        width:40%;
+        margin: auto;
+        margin-top: 2%;
+    }
+  }
+
+
+
+.lists {
+    padding: 10%;
+}
+
+#t1 {
+    color: white;
+}
+
+.toggle {
+    text-align: center;
+}
+
+.table {
+    margin-top: 5%;
+    margin-right: 5%;
+    background-color: azure;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+.required {
+    color: red;
+}
