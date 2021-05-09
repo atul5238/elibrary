@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !\.(jpg|js)$
+RewriteRule ^((?!index\.php).+)$ /index.php [L,QSA]
