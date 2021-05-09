@@ -71,7 +71,7 @@ class Users extends QueryBuilder{
 				header('location:/login');
 			}
 			else{
-				   $lnk='http://elib.test/verify?id='.$emailid.'&secret='.$pass;
+				   $lnk='http://13.234.236.151/verify?id='.$emailid.'&secret='.$pass;
 				   
 				   if(Mail::sendVerificationMail($lnk,$emailid,$name)){
 					header("location:/splashmsg?msgtype=unverified");
