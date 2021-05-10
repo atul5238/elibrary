@@ -32,11 +32,6 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>Are You Sure, You Want To Delete "<span id='category_name' class="font-weight-bolder"></span>" Category !</label>
-        </div>
-        <input type="hidden" name="cid" id='cid'>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>

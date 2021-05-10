@@ -12,9 +12,9 @@ elseif($_GET['msgtype']=='unverified'){
 	$footermsg='';
 }
 elseif($_GET['msgtype']=='forgotpassword'){
-	$headermsg='Lost your password. Don’t worry!';
-	$bodymsg='Use the link sent to your mail to reset password.';
-	$footermsg=' If it doesn’t appear within a few minutes, check your spam folder.s';
+	$headermsg='';
+	$bodymsg='We have sent you an email to reset your password';
+	$footermsg=' ';
 }
 
 elseif($_GET['msgtype']=='verificationfailed'){
