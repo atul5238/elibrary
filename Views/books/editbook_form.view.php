@@ -6,7 +6,7 @@ $msg1=$msg2=$msg3=$msg4=NULL;
   <div class="row">
     <div class="col-md m-3">
       <div class="modal-dialog" role="form">
-        <form action='/editbook' method="POST" enctype="multipart/form-data"  onsubmit="return (checkFieldName('book_name') && checkFieldName('author_name') && checkFieldName('description') && checkFileInput('book_cover'))">
+        <form action='/editbook' method="POST" enctype="multipart/form-data" >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">Edit Book Details</h5>
@@ -14,12 +14,12 @@ $msg1=$msg2=$msg3=$msg4=NULL;
             <div class="modal-body">
               <div class="form-group">
                 <label for="book_name">Book Name*</label>
-                <input type="text" class="form-control" id="book_name" name="book_name" value="<?=$book_name?>">
+                <input type="text" class="form-control" id="book_name" name="book_name" value="<?=$book_name?>" required>
                 <small class="form-text text-muted text-danger" id='errorbook_name'><?=$msg1?></small>
               </div>
               <div class="form-group">
                 <label for="author_name">Author Name*</label>
-                <input type="text" class="form-control" id="author_name" name="author_name" value="<?=$author_name?>">
+                <input type="text" class="form-control" id="author_name" name="author_name" value="<?=$author_name?>" required>
                 <small class="form-text text-muted text-danger" id='errorauthor_name'><?=$msg2?></small>
               </div>
               <div class="form-group">
@@ -39,7 +39,7 @@ $msg1=$msg2=$msg3=$msg4=NULL;
           </label>
         </div>
         <div class="custom-file">
-          <input type="file" class="custom-file-input" id="book_cover" accept="image/*" name="book_cover" onchange="checkFileInput('book_cover')">
+          <input type="file" class="custom-file-input" id="book_cover" accept="image/*" name="book_cover">
           <label class="custom-file-label" for="book_cover">New Book Cover #</label>
           <small class="form-text text-muted ml-1"># Size Must Be Less Than 1MB</small> <small class="form-text text-muted text-danger" id='errorbook_cover'><?=$msg4?></small>
         </div>

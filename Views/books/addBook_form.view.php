@@ -13,11 +13,11 @@ $msg1=$msg2=$msg3=$msg4=NULL;
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <input type="text" class="form-control" id="book_name" name="book_name" placeholder="Enter Book Name *"  onkeyup="checkFieldName('book_name')" required> 
+            <input type="text" class="form-control" id="book_name" name="book_name" placeholder="Enter Book Name *" required> 
             <small class="form-text text-muted text-danger" id='errorbook_name'><?=$msg1?></small>   
           </div>
           <div class="form-group">
-          <input type="text" class="form-control" id="author_name" name="author_name" placeholder="Author Name *" onkeyup="checkFieldName('author_name')" required>
+          <input type="text" class="form-control" id="author_name" name="author_name" placeholder="Author Name *"  required>
              <small class="form-text text-muted text-danger" id='errorauthor_name'><?=$msg2?></small>  
           </div>
           
@@ -31,7 +31,7 @@ $msg1=$msg2=$msg3=$msg4=NULL;
              <small class="form-text text-muted text-danger" id='errorbook_description'><?=$msg3?></small>  
            </div>
       <div class="custom-file">
-        <input type="file" class="custom-file-input" id="book_cover" accept="image/*" name="book_cover" onchange="checkFileInput('book_cover')">
+        <input type="file" class="custom-file-input" id="book_cover" accept="image/*" name="book_cover" >
         <label class="custom-file-label" for="book_cover">Book Cover * </label>
         <small class="form-text text-muted mt-0 ml-2">Note* - Size Must Be Less Than 1MB.</small>
         <small class="form-text text-muted text-danger" id='errorbook_cover'><?=$msg4?></small>
