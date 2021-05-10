@@ -105,7 +105,7 @@
        <div class="row col-4 offset-8 py-3">
          <nav aria-label="Page navigation example">
            <ul class="pagination">
-             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            
 
              <?php
               if (($offset - $limit) >= 0) :
