@@ -1,6 +1,6 @@
 <?php
 $host='localhost';
-$sql_user='root';
-$pass='A7ul@5238';
-$database_name='elib_db';
+$sql_user='your database username';
+$pass='your database password';
+$database_name='your database name ';
 ?>
