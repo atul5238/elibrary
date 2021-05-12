@@ -62,25 +62,22 @@ class Users extends QueryBuilder{
 	public function deleteUser($emailid){
 		return parent::delete($this->table,$this->names[1],$emailid);
 	}
-	public function registerUser($name,$emailid,$pass,$id){
-		$pass=password_hash($pass, PASSWORD_DEFAULT);
-		$this->names=['user_name','email_id','password','provider_id','verified_id'];
-		$this->values=["'{$name}'","'{$emailid}'","'{$pass}'","'{$id}'","'0'"];
-		if(parent::insert($this->table,$this->names,$this->values)){
-			if($id!=NULL){
-				header('location:/login');
-			}
-			else{
-				   $lnk=APP_URL.'/verify?id='.$emailid.'&secret='.$pass;
-				   
-				   if(Mail::sendVerificationMail($lnk,$emailid,$name)){
-					header("location:/splashmsg?msgtype=unverified");
-				   }
-				   else{
-				   	$this->deleteUser($emailid);
-				   	$this->flashError(['Internal Error, Try Again'],'/index?register=1');
-				   }	
-			}
+	public function registerUser($name, $emailid, $pass)
+	{
+		$pass = password_hash($pass, PASSWORD_DEFAULT);
+		$this->names = ['user_name', 'email_id', 'password', 'verified_id'];
+		$this->values = ["'{$name}'", "'{$emailid}'", "'{$pass}'", "'0'"];
+		if (parent::insert($this->table, $this->names, $this->values)) {
+
+			$lnk = APP_URL . '/verify?id=' . $emailid . '&secret=' . $pass;
+
+			if (Mail::sendVerificationMail($lnk, $emailid, $name)) {
+				header("location:/splashmsg?msgtype=unverified");
+			} else {
+				$this->deleteUser($emailid);
+				$this->flashError(['Internal Error, Try Again'], '/index?register=1');
+			}	
+			
 		}
 	}
 	public function activate($emailid){
