@@ -41,7 +41,7 @@ if (isset($_SESSION['token']) and isset($_SESSION['loginid'])) {
 					
 					<div class="text-center text-lg-left border-bottom">
 						<?php if (!isset($_GET['view']) || (isset($_GET['view']) && $_GET['view'] == 'books')) : ?>
-							<h2>Books <a href='#' data-toggle="modal" data-target="#addBookModal" id='btn-addBook'><i class="fas fa-plus-circle text-secondary h4"></i></a>
+							<h2>Add Book <a href='#' data-toggle="modal" data-target="#addBookModal" id='btn-addBook'><i class="fas fa-plus-circle text-secondary h4"></i></a>
 							</h2>
 					</div>
 					<?php require __dir__ . '/' . '../books/ListBooks.php'; ?>

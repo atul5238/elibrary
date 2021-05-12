@@ -1,3 +1,11 @@
+<?php  if(isset($msg4)) : ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <?= $msg4 ?>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php endif; ?>
 <div class="border border-dark p-4 rounded bg-dark text-white col-sm-6 col-9 col-lg-12 mx-auto">
 	<form method="POST" action="/login" >
 		<h5 class="text-center">Welcome Back</h5>   

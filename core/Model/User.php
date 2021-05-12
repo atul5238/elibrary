@@ -71,7 +71,7 @@ class Users extends QueryBuilder{
 				header('location:/login');
 			}
 			else{
-				   $lnk='http://13.234.236.151/verify?id='.$emailid.'&secret='.$pass;
+				   $lnk=APP_URL.'/verify?id='.$emailid.'&secret='.$pass;
 				   
 				   if(Mail::sendVerificationMail($lnk,$emailid,$name)){
 					header("location:/splashmsg?msgtype=unverified");
@@ -92,7 +92,8 @@ class Users extends QueryBuilder{
 		if(!parent::update($this->table,['password'=>$password],'email_id',$emailid))	
 			$this->flashError(['Problem in Updation'],'/passwordreset');	
 		else
-			header('location:/');
+		$this->flashError([null,null,null,'Your Password has been updated successfully'],'/');
+		
 	}
 	public function readBook($uid,$bid){
 		$this->names=['uid','bid', 'type'];

@@ -22,6 +22,10 @@ if (isset($_SESSION['error3'])){
 	$msg3="<p class='text-danger'>{$_SESSION['error3']}</p>";
 	unset($_SESSION['error3']);
 }
+if (isset($_SESSION['error4'])){
+	$msg4="<p class='text-success'>{$_SESSION['error4']}</p>";
+	unset($_SESSION['error4']);
+}
 if(isset($_SESSION['name'])){
 	$emailid=$_SESSION['name'];
 	unset($_SESSION['name']);

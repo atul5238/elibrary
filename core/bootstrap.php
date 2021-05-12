@@ -1,4 +1,5 @@
 <?php
+require __dir__.'/'.'configs/environment/config.php';
 require __dir__.'/'.'Model/database/Connection.php';
 require __dir__.'/'.'Model/database/QueryBuilder.php';
 require __dir__.'/'.'Model/User.php';
