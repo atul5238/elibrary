@@ -1,6 +1,6 @@
  <div class="border border-secondary p-4 rounded bg-dark text-white col-sm-6 col-9 col-lg-12 mx-auto">
      <form action="/registration" method="post" >
-         <h5 class="text-center">Welcome You</h5>
+         <h5 class="text-center">Signup Here !</h5>
          <input type="text" class="form-control mt-4" name="rname" id="rname" placeholder="Enter Full Name *" value="<?= $rname ?>" required>
          <small class="form-text text-muted text-danger" id='errorrname'><?= $msg1 ?></small>
          <input type="email" class="form-control  mt-2" name="remailid" id="remailid" placeholder="Enter Email *" value="<?= $emailid ?>" required>

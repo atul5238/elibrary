@@ -16,7 +16,7 @@
 	require __dir__.'/Controllers/auth/checkAuthentication.php';
 	require __dir__.'/Views/common/header.view.php';
 	require Router::load('routes.php')->direct(Request::uri());
-	require __dir__.'/Views/common/footer.view.php';
+	
 	require __dir__.'/resources/bootstrap/bootstrap4_js.php';	
 	require __dir__.'/'.'Views/common/modals.view.php';
 	?>

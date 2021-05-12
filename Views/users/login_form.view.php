@@ -8,7 +8,7 @@
 <?php endif; ?>
 <div class="border border-dark p-4 rounded bg-dark text-white col-sm-6 col-9 col-lg-12 mx-auto">
 	<form method="POST" action="/login" >
-		<h5 class="text-center">Welcome Back</h5>   
+		<h5 class="text-center">Login Here !</h5>   
 		<input type="email" class="form-control mt-4" name="emailid" id="emailid"  placeholder="Enter Email Address *" value="<?=$emailid?>" required>
 		<small class="form-text text-muted text-danger" id='erroremailid'><?=$msg1?></small>
 		<input type="password" class="form-control mt-2" id="password" placeholder="Enter Password *" name="password" value='<?=$password?>' required>
