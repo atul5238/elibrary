@@ -147,7 +147,7 @@ class Users extends QueryBuilder{
 	public function createAdmin($user_name,$email,$password){
 		$pass=password_hash($password, PASSWORD_DEFAULT);
 		$this->names=['user_name','email_id','password','verified_id','type' ];
-		$this->values=["'{$user_name}'","'{$email}'","'{$password}'","'1'" ,"'0'"];
+		$this->values=["'{$user_name}'","'{$email}'","'{$pass}'","'1'" ,"'0'"];
 		return parent::insert($this->table,$this->names,$this->values);
 	}
 }
